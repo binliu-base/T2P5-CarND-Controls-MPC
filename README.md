@@ -56,7 +56,7 @@ The transformation used is
       X =   cos(psi) * (ptsx[i] - x) + sin(psi) * (ptsy[i] - y);
       Y =  -sin(psi) * (ptsx[i] - x) + cos(psi) * (ptsy[i] - y);  
 ```
-where `X,Y` denote coordinates in the vehicle coordinate system. Note that the initial position of the car and heading direction are always zero in this frame. Thus the state of the car in the vehicle cordinate system is 
+where `X,Y` denote coordinates of waypoints in the vehicle coordinate system. Note that the initial position of the car and heading direction are always zero in this frame. Thus the state of the car in the vehicle cordinate system is 
 ```
           state << 0, 0, 0, v, cte, epsi;
 ```
