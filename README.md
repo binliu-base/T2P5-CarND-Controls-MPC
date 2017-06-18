@@ -66,11 +66,11 @@ initially.
 The additional latency (100ms) has significant impact on the result. When delays are not properly accounted for oscillations and/or bad trajectories can occur.
 
 Two common approach to take delays into account:
-1. First approach, When receiving states from the simulator, we first predict its state after 100 ms, and then feed this new state into the solver. The MPC trajectory is then determined by solving the control problem starting from that position. 
+1. First, after receiving states from the simulator, we first predict its state after 100 ms, and then feed this new state into the solver. The MPC trajectory is then determined by solving the control problem starting from that position. 
 
-2. Another approach,  the control problem is solved from the current position and time onwards. Latency is taken into account by constraining the controls to the values of the previous iteration for the duration of the latency. Thus the optimal trajectory is computed starting from the time after the latency period. This has the advantage that the dynamics during the latency period is still calculated according to the vehicle model. 
+2. Second,  the control problem is solved from the current position and time onwards. Latency is taken into account by constraining the controls to the values of the previous iteration for the duration of the latency. Thus the optimal trajectory is computed starting from the time after the latency period. This has the advantage that the dynamics during the latency period is still calculated according to the vehicle model. 
 
-Here, I chose the second approach . The actuations are forced to remain at their previous values for the time of the latency. This is implemented in 
+Here, I chose the second approach. The actuations are forced to remain at their previous values for the time of the latency. This is implemented in 
 `MPC::Solve` like so. 
 
 ```  
