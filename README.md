@@ -18,7 +18,7 @@ Desigh Requirements are as follows:
 ![mpc](https://user-images.githubusercontent.com/24623272/27259729-4539316c-544c-11e7-8738-f385f02c34d3.png)
 
 ### The Model
-The vehicle kinematic model is used in this project, which ignore all dynamical effects such as the complex interactions between the tires and the road determine the dynamics of the vehicle. 
+Vehicle kinematic model is used in this project, which ignore all dynamical effects such as the complex interactions between the tires and the road determine the dynamics of the vehicle. 
 The MPC system has three main components. 
 
 #### 1. State vector and errors
