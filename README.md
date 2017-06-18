@@ -47,7 +47,7 @@ In the case,  I choose N = 16, dt= 0.05, such that drives the car smoothly aroun
 
 ### Polynomial Fitting and MPC Preprocessing
 
-* MPC Preprocessing:  Use transformGlobalToVehicle to transform the given x and y coordinates of car position and representing waypoints, from global coordinate system to the vehicle coordinate system.
+* MPC Preprocessing:  Use transformGlobalToVehicle to transform the given x and y coordinates of car position and representing waypoints from global coordinate system to the vehicle coordinate system.
 * Use polyfit to fit a 3rd order polynomial to the given x and y coordinates representing waypoints.
 * Use evaluateCte and evaluateEpsi to get cross-track error and orientation error from fit.
 
